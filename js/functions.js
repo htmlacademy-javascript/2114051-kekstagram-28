@@ -1,17 +1,15 @@
-const checkTest = (string, number) => string.length <= number;
+const firstTask = (string, number) => string.length <= number;
 
-
-const palindrome = (string) => {
-string = string.toLowerCase().replaceAll(" ", "");
-return string === string.split("").reverse().join("");
+const secondTask = (string) => {
+string = string.toLowerCase().replaceAll('', '');
+return string === string.split('').reverse().join('');
 }
 
-
-const checkNumber = (string) => {
-  if (typeof string === "number") {
+const thirdTask = (string) => {
+  if (typeof string === 'number') {
     return string;
   }
-    let result = "";
+    let result = '';
   for (let i = 0; i < string.length; i++) {
     if (!Number.isNaN(parseInt(string.at(i), 10))) {
     result += string.at(i);
@@ -19,7 +17,6 @@ const checkNumber = (string) => {
   }
     return parseInt(result, 10);
 }
-
 
 const myPadStart = (string, minLength, pad) => {
   const actualPad = minLength - string.length;
